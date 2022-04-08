@@ -1,10 +1,11 @@
-import {useState, useEffect} from 'react'
+
+import {useState} from 'react'
 
 
 function App() {
 
 
-const [beer, setBeer] = useState();
+const [beer, setBeer] = useState([]);
 
 const loadBeers = () => {
 
@@ -14,16 +15,18 @@ const loadBeers = () => {
       })
       .then((json)=>{
         setBeer(json);
+       
       })
 
 }
 
+
+
   return (
     <div className="main">
-
-      Cervejas:
-
-      <button onClick={loadBeers}>Clica!</button>
+       Cervejas:
+       {console.log(beer)}
+        <button onClick={loadBeers}>Clica!</button>
       <br/><br/>
       <div>
         {beer[0].name}
@@ -44,5 +47,4 @@ const loadBeers = () => {
 }
 
 export default App;
-
 
