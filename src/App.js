@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react'
+import {Componente} from './components/Componente'
 
 function App() {
 
-const [beerName, setBeerName] = useState();
+const [beerName, setBeerName] = useState([]);
 const [beerDescription, setBeerDescription] = useState();
 const [beerFood, setBeerFood] = useState();
 const [beerImage, setBeerImage] = useState();
@@ -11,44 +12,32 @@ const [beer, setBeer] = useState();
 const [drinkName, setDrinkName] = useState();
 const [drink, setDrink] = useState();
 
-const loadBeers = () => {
+const loadBeers = async (e) => {
 
-    fetch('https://api.punkapi.com/v2/beers/random')
-      .then((response)=>{
-        return response.json();
-      })
-      .then((json)=>{
-        setBeerName(json[0].name);
-        setBeerDescription(json[0].description)
-        setBeerFood(json[0].food_pairing[0])
-        setBeerImage(json[0].image_url)
-        setBeer(json)
-      }).catch((e)=>{
-        console.error(e)
-      })
-}
+        let response = await fetch('https://api.punkapi.com/v2/beers/random');
+        let json = await response.json();
+        setBeer(json[0].name); 
+        setBeerName(json[0])  
+  }
 
-const loadDrinks = () => [
-  fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
-    .then((response)=>{
-      return response.json();
-    })
-    .then((json)=>{
-      console.log(json.drinks[0])
-      setDrinkName(json.drinks[0].strDrink)
-      setDrink(json)
-    })
-]
 
 
 return (
     <div className="main">
-       Cervejas:
+
         <button onClick={loadBeers}>Cerveja!</button>
-        <button onClick={loadDrinks}>Drink!</button>
+        {/* <button onClick={loadDrinks}>Drink!</button> */}
       <br/><br/>
       <div>
-        {beerName}
+      Cervejas:
+          {/* <Componente beer={beer}/> */}
+          {beer}
+          {console.log.BeerName}
+          {beerName}
+          {/* {beer[0].name} */}
+             
+        
+        {/* {beerName}
         {drinkName}
         <br/><br/>
         {beerDescription}
@@ -58,7 +47,7 @@ return (
 
         <br/><br/><br/><br/>
 
-        <img src={beerImage} width={60}></img>
+        <img src={beerImage} alt=""width={60}></img> */}
         
       </div>
     </div>

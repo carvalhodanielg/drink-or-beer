@@ -1,11 +1,9 @@
-export const objeto = ["Fazer primeira coisa"];
-
-
-
-export const Componente = () => {
+export const Componente = ({beer}) => {
       return (
       <div>
-        aqui é o componente, hein
+       
+        {beer}
+       
       </div>
 
 
