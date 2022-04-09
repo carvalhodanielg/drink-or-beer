@@ -1,6 +1,4 @@
-
 import {useState, useEffect} from 'react'
-
 
 function App() {
 
@@ -11,6 +9,7 @@ const [beerImage, setBeerImage] = useState();
 const [beer, setBeer] = useState();
 
 const [drinkName, setDrinkName] = useState();
+const [drink, setDrink] = useState();
 
 const loadBeers = () => {
 
@@ -27,9 +26,7 @@ const loadBeers = () => {
       }).catch((e)=>{
         console.error(e)
       })
-
 }
-
 
 const loadDrinks = () => [
   fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
@@ -39,37 +36,30 @@ const loadDrinks = () => [
     .then((json)=>{
       console.log(json.drinks[0])
       setDrinkName(json.drinks[0].strDrink)
+      setDrink(json)
     })
-
-
 ]
 
 
 return (
     <div className="main">
        Cervejas:
-
         <button onClick={loadBeers}>Cerveja!</button>
         <button onClick={loadDrinks}>Drink!</button>
-
       <br/><br/>
       <div>
         {beerName}
         {drinkName}
-
         <br/><br/>
         {beerDescription}
         <br/><br/><br/>
 
         {beerFood}
 
-
         <br/><br/><br/><br/>
 
         <img src={beerImage} width={60}></img>
-
-
-
+        
       </div>
     </div>
   );
