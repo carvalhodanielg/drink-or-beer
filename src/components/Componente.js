@@ -1,8 +1,17 @@
+import { useState } from "react";
+
 export const Componente = ({beer}) => {
-      return (
+
+const [beerCom, setBeerCom] = useState();
+
+setBeerCom(beer[0].name)
+
+  return (
       <div>
+
+
+       {console.log(beerCom)}
        
-        {beer}
        
       </div>
 
