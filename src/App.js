@@ -39,20 +39,38 @@ return (
 
           { toggle === "beer" &&
           
-               <div> 
-                 Cervejas: 
-                 <br/>
-                 {beer[0].name} </div>
+            <div> 
+
+              <h2>Beer:</h2> 
+              {beer[0].name}
+              <br/>
+              <br/>
+              <h2>Description:</h2>
+              {beer[0].description}
+              <br/>
+              <br/>
+               
+              <h2>Food pairing:</h2>
+              {beer[0].food_pairing[0]}<br/>
+              {beer[0].food_pairing[1]}<br/>
+              {beer[0].food_pairing[2]}<br/>
+
+              {/* <img src={beer[0].image_url}></img> */}
+
+
+            </div>
 
           }
 
       { toggle === "drink" &&
-          
+        
           <div> 
-            Drink: 
-            <br/>
-            {drink.drinks[0].strDrink} </div>
 
+            <h2>Drink:</h2> 
+            <hr/>
+            {drink.drinks[0].strDrink} 
+          
+          </div>
      }
 
 
