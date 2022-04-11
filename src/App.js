@@ -67,8 +67,22 @@ return (
           <div> 
 
             <h2>Drink:</h2> 
-            <hr/>
+            <br/>
             {drink.drinks[0].strDrink} 
+            <br/>
+            <br/>
+            {drink.drinks[0].strTags}
+            <br/>
+            <br/>
+            {drink.drinks[0].strInstructions}
+            <br/>
+            <br/>
+            {drink.drinks[0].strIngredient1}, {drink.drinks[0].strIngredient2}, {drink.drinks[0].strIngredient3}
+            <br/>
+            <br/>
+
+            <img src={drink.drinks[0].strDrinkThumb} width={200}></img>
+            
           
           </div>
      }
