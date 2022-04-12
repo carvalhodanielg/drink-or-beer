@@ -32,7 +32,7 @@ return (
         <C.Header>
         <p>What you're gonna <span>drink </span> today?</p>
         {/* <img src='../public/decide-the-night.svg' alt=''></img> */}
-        <img src='/decide-the-night.svg' alt='alt' height="150px"></img>
+        <img id='drinkImg' src='/decide-the-night.svg' alt='alt' height="150px"></img>
 
         </C.Header>
 

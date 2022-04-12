@@ -25,3 +25,13 @@ body{
 
 
 } 
+
+
+#drinkImg{
+    transition: transform .3 ease-in-out;
+    cursor: pointer;
+}
+
+#drinkImg:hover{
+    transform: rotate(10deg);
+}
