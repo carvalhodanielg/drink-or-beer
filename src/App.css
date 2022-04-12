@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: white;
 }
 
@@ -46,8 +46,7 @@ margin: 0 auto;
 }
 
 .content{
-
-
+    font-family: Arial, sans-serif;
 }
 
 .content h2{
@@ -67,6 +66,7 @@ margin: 0 auto;
     color: rgb(21, 240, 172);
 
 }
+
 
 .image-content{
     display: flex;

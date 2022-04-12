@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 
 export const Header = styled.div`
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 250px;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: rgb(21, 240, 172);
 
     img{
@@ -23,7 +22,13 @@ export const Header = styled.div`
 
         span{
             color: rgb(150,65,212);
+
+            &:hover{
+                color: rgba(150,65,212, .9); 
+            }
         }
+
+
     }
    
 `;
@@ -59,7 +64,14 @@ export const Footer = styled.footer`
         text-align: center;
 
         margin-top: ${(toggle) => toggle.margin===null?'30vh':0}
+        text-decoration: none; 
 
+        a{
+            text-decoration: none; 
 
-
+            &:hover{
+                color: rgba(255,255,255,.8)
+            }
+        }
+        
 `;

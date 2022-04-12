@@ -103,13 +103,13 @@ return (
             {<img src={drink.drinks[0].strDrinkThumb} width={200}></img>}   
 
           </div> }
-
+        
            
 
       </div>
        
         {
-          <C.Footer margin={toggle} >Developed by: Daniel Carvalho | 2022</C.Footer>
+          <C.Footer margin={toggle} ><a href='https://github.com/carvalhodanielg'> Developed by: Daniel Carvalho | 2022 </a></C.Footer>
         }
 
     </div>
