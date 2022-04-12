@@ -13,6 +13,7 @@ body{
 }
 
 .main{
+margin: 0 auto;
 
 }
 
@@ -46,6 +47,24 @@ body{
 
 .content{
 
+
+}
+
+.content h2{
+    margin-bottom: 5px;
+    color: rgb(21, 240, 172);
+    transition: transform ease-in-out .01s;
+}
+
+.content h2:hover{
+    transform: translateX(5px);
+}
+
+
+
+.content h2{
+    margin-bottom: 5px;
+    color: rgb(21, 240, 172);
 
 }
 

@@ -7,7 +7,7 @@ function App() {
 
 const [beer, setBeer] = useState();
 const [drink, setDrink] = useState();
-const [toggle, setToggle] = useState();
+const [toggle, setToggle] = useState(null);
 
 const loadBeers = async (e) => {
         let response = await fetch('https://api.punkapi.com/v2/beers/random');
@@ -76,38 +76,45 @@ return (
           <div className='content'> 
 
             <h2>Drink:</h2> 
-            <br/>
             {drink.drinks[0].strDrink} 
             <br/>
             <br/>
+            <h2>Tipo:</h2>
             {drink.drinks[0].strTags}
             <br/>
             <br/>
+            <h2>Instructions:</h2>
             {drink.drinks[0].strInstructions}
             <br/>
             <br/>
+            <h2>Ingredients:</h2>
             {drink.drinks[0].strIngredient1}, {drink.drinks[0].strIngredient2}, {drink.drinks[0].strIngredient3}
             <br/>
             <br/>
 
-             
           </div>
 
           
 
      }
-          { 
+          { toggle === "drink" && 
           <div className='image-content'> 
 
-          
-          {<img src={drink.drinks[0].strDrinkThumb} width={200}></img>}   
+            {<img src={drink.drinks[0].strDrinkThumb} width={200}></img>}   
 
           </div> }
 
            
 
       </div>
+       
+        {
+          <C.Footer margin={toggle} >Developed by: Daniel Carvalho | 2022</C.Footer>
+        }
+
     </div>
+
+    
   );
 }
 

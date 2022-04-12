@@ -47,3 +47,19 @@ export const Button = styled.button`
 
 
 `;
+
+export const Footer = styled.footer`
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px white solid;
+        text-align: center;
+
+        margin-top: ${(toggle) => toggle.margin===null?'30vh':0}
+
+
+
+`;
