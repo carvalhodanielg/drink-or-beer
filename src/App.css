@@ -35,3 +35,25 @@ body{
 #drinkImg:hover{
     transform: rotate(10deg);
 }
+
+.parent-content{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 150px;
+}
+
+.content{
+
+
+}
+
+.image-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+

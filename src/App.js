@@ -44,12 +44,12 @@ return (
 
         </div>
       
-        <div>
+        <div className='parent-content'>
       
 
 
-  { toggle === "beer" &&
-            <div> 
+                    { toggle === "beer" &&
+            <div className='content'> 
 
               <h2>Beer:</h2> 
               {beer[0].name}
@@ -69,11 +69,11 @@ return (
 
             </div>
 
-  }
+                   }
 
       { toggle === "drink" &&
         
-          <div> 
+          <div className='content'> 
 
             <h2>Drink:</h2> 
             <br/>
@@ -90,10 +90,21 @@ return (
             <br/>
             <br/>
 
-            <img src={drink.drinks[0].strDrinkThumb} width={200}></img>
-            
+             
           </div>
+
+          
+
      }
+          { 
+          <div className='image-content'> 
+
+          
+          {<img src={drink.drinks[0].strDrinkThumb} width={200}></img>}   
+
+          </div> }
+
+           
 
       </div>
     </div>
