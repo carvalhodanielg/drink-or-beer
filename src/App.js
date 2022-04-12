@@ -1,12 +1,12 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
+import  * as C from './AppStyle'
+import  './App.css'
 
 
 function App() {
 
 const [beer, setBeer] = useState();
-
 const [drink, setDrink] = useState();
-
 const [toggle, setToggle] = useState();
 
 const loadBeers = async (e) => {
@@ -14,7 +14,7 @@ const loadBeers = async (e) => {
         let json = await response.json();
         setBeer(json); 
         setToggle("beer") 
-  }
+}
 
 
 const loadDrinks = async (e) => {
@@ -25,20 +25,30 @@ const loadDrinks = async (e) => {
 }
 
 
-
 return (
     <div className="main">
 
-        <button onClick={loadBeers}>Cerveja!</button>
-        <button onClick={loadDrinks}>Drink!</button>
 
-      <br/><br/>
-      <div>
+        <C.Header>
+        <p>What you're gonna <span>drink </span> today?</p>
+        {/* <img src='../public/decide-the-night.svg' alt=''></img> */}
+        <img src='/decide-the-night.svg' alt='alt' height="150px"></img>
+
+        </C.Header>
+
+        <div className='buttons'> 
+
+
+        <C.Button onClick={loadBeers}>Beer!</C.Button>
+        <C.Button onClick={loadDrinks}>Drink!</C.Button>
+
+        </div>
+      
+        <div>
       
 
 
-          { toggle === "beer" &&
-          
+  { toggle === "beer" &&
             <div> 
 
               <h2>Beer:</h2> 
@@ -55,12 +65,11 @@ return (
               {beer[0].food_pairing[1]}<br/>
               {beer[0].food_pairing[2]}<br/>
 
-              {/* <img src={beer[0].image_url}></img> */}
-
+              {/* <img src={beer[0].image_url} width={100}></img> */}
 
             </div>
 
-          }
+  }
 
       { toggle === "drink" &&
         
@@ -83,14 +92,9 @@ return (
 
             <img src={drink.drinks[0].strDrinkThumb} width={200}></img>
             
-          
           </div>
      }
 
-
-
-
-        
       </div>
     </div>
   );
