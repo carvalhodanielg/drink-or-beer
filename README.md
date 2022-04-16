@@ -56,7 +56,8 @@ Maybe you can mention me or this repo in the acknowledgements too
 
 <div align="center"> 
   <img src="https://user-images.githubusercontent.com/100332887/163655327-f80d882c-9159-4326-9be9-7e07781410c4.png" alt="screenshot" />
-    <img src="https://user-images.githubusercontent.com/100332887/163656295-9434ba87-009b-43d4-9c2f-35e35034fc8f.png" alt="screenshot" />
+  
+  <img src="https://user-images.githubusercontent.com/100332887/163656295-9434ba87-009b-43d4-9c2f-35e35034fc8f.png" alt="screenshot" />
 </div>
 
 
