@@ -30,6 +30,14 @@ export const Header = styled.div`
 
 
     }
+
+
+    @media (max-width:800px){
+        font-size: 2rem;
+        margin: 20px 30px;
+        text-align: center;
+
+    } 
    
 `;
 
@@ -50,12 +58,17 @@ export const Button = styled.button`
         background-color: rgba(150,65,212,.8);
     }
 
+    @media (max-width: 290px){{
+        font-size: 1.5rem;
+        margin: 0 15px;
+    }}
 
 `;
 
 export const Footer = styled.footer`
         width: 100%;
         height: 50px;
+
         display: flex;
         flex-direction: row;
         justify-content: center;

@@ -76,3 +76,22 @@ margin: 0 auto;
     margin-left: 30px;
 }
 
+@media (max-width: 800px){
+    .parent-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 40px 30px;
+    }
+
+
+    .image-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+
+}
